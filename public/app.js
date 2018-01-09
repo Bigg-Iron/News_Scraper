@@ -27,6 +27,8 @@ $.getJSON("/articles", function(data) {
         console.log(data);
         // The title of the article
         $("#notes").append("<h2>" + data.title + "</h2>");
+        // The link to the article
+        $("#notes").append("<p>" + data.link + "</p>");
         // An input to enter a new title
         $("#notes").append("<input id='titleinput' name='title' >");
         // A textarea to add a new note body
@@ -71,5 +73,6 @@ $.getJSON("/articles", function(data) {
     // Also, remove the values entered in the input and textarea for note entry
     $("#titleinput").val("");
     $("#bodyinput").val("");
+
   });
   

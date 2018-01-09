@@ -37,7 +37,7 @@ mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI, {
     useMongoClient: true,    
 });
-console.log(`mongoose?`);
+console.log(MONGODB_URI);
 
 
 // Routes
