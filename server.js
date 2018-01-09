@@ -17,6 +17,9 @@ var PORT = 3000;
 // Initialize Express
 var app = express();
 
+// Configure MONGODB_URI
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/new";
+
 // Configure middleware
 
 // Use morgan logger for logging requests
@@ -32,8 +35,10 @@ app.use(express.static("public"));
 // Connect to the Mongo DB
 mongoose.Promise = Promise;
 mongoose.connect("mongodb://localhost/new", {
-    useMongoClient: true
+    useMongoClient: true,    
 });
+console.log(`mongoose?`);
+
 
 // Routes
 
