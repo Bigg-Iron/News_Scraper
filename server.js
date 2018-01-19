@@ -36,7 +36,7 @@ app.use(express.static("public"));
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI, {
     useMongoClient: true,    
-});
+}).catch(e => console.log(e));
 console.log(MONGODB_URI);
 
 
