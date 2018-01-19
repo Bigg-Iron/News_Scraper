@@ -7,7 +7,7 @@ $.getJSON("/articles", function(data) {
       // Display the apropos information on the page
       $("#articles").append("<p data-id='" + data[i]._id + "'>" + data[i].title + data[i].link + "</p>" + "<br />");
     }
-  });
+  }).catch(e => console.log(e));
   
   
   // Whenever someone clicks a p tag
@@ -75,5 +75,5 @@ $.getJSON("/articles", function(data) {
     $("#titleinput").val("");
     $("#bodyinput").val("");
 
-  }).catch(e => console.log(e));
+  })
   
