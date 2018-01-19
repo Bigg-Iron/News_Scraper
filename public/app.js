@@ -43,7 +43,7 @@ $.getJSON("/articles", function(data) {
           // Place the body of the note in the body textarea
           $("#bodyinput").val(data.note.body);
         }
-      });
+      }).catch(e => console.log(e));
   });
   
   // When you click the savenote button
@@ -68,11 +68,12 @@ $.getJSON("/articles", function(data) {
         console.log(data);
         // Empty the notes section
         $("#notes").empty();
-      });
+      })
+      .catch(e => console.log(e));
   
     // Also, remove the values entered in the input and textarea for note entry
     $("#titleinput").val("");
     $("#bodyinput").val("");
 
-  });
+  }).catch(e => console.log(e));
   
