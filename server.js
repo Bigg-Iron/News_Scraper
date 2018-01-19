@@ -90,6 +90,7 @@ app.get("/articles", function (req, res) {
         .find({})
         .then(function (dbArticle) {
             // If we were able to successfully find Articles, send them back to the client
+            console.log(dbArticle);
             res.json(dbArticle);
         })
         .catch(function (err) {
